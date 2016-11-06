@@ -24,7 +24,7 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Lab1\Vect.h">
+    <ClInclude Include="Vect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,7 +35,7 @@
     <ClCompile Include="Lab2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Lab1\Vect.cpp">
+    <ClCompile Include="Vect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
