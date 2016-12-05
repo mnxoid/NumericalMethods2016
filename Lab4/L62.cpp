@@ -16,12 +16,12 @@ void L62::coef(long double *a, long double *d, long double *f) {
 	однорiдної консервативної рiзницевої схеми */
 	for (int i = 1; i <= n; i++) {
 		xi = i*h;
-		a[i] = 1.0 + pow(xi - 0.5*h, 2);
+		a[i] = k(xi - 0.5);
 	}
 	for (int i = 0; i <= n; i++) {
 		xi = i*h;
-		d[i] = xi;
-		f[i] = -pow(xi, 2);
+		d[i] = q(xi);
+		f[i] = this->f(xi);
 	}
 }
 
