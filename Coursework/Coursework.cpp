@@ -20,9 +20,17 @@ using namespace std::chrono;
 int main()
 {
 	Matrix<dfun2, 2, 1> F; //!< The NES
+	/*
+		x_1   + x_2   = 3
+		x_1^2 + x_2^2 = 9
+	*/
 	F << [](const Vector2d &x) {return x[0] + x[1] - 3; },
 		[](const Vector2d &x) {return x[0] * x[0] + x[1] * x[1] - 9; };
 	Matrix<dfun2, 2, 2> W; //!< The Jacobian
+	/*
+		1,    1
+		2x_1, 2x_2
+	*/
 	W << [](const Vector2d &x) {return 1; }, [](const Vector2d &x) {return 1; },
 		[](const Vector2d &x) {return 2 * x[0]; }, [](const Vector2d &x) {return 2 * x[1]; };
 	Newton N;
