@@ -54,9 +54,12 @@ public:
 		{
 			cout << delta<N>(x1, x0) << endl;
 		}
+		Matrix<double, N, 1> zero;
+		for (int i = 0; i < N; i++)zero[i] = 0;
 		//cout << endl;
-		while (delta<N>(x1, x0) >= eps)
+		while (delta<N>(x1, x0) >= eps || delta<N>(apply<N, 1>(this->F, x1), zero) >= eps)
 		{
+			//cout << delta<N>(apply<N, 1>(this->F, x1), zero) << endl;
 			k++;
 			//wcout << L"Ітерація " << k << ":" << endl;
 

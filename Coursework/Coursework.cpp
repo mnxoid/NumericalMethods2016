@@ -42,7 +42,7 @@ int main()
 			[](const Vector2d &x) {return 2 * x[0]; }, [](const Vector2d &x) {return 2 * x[1]; };
 		double eps = 0.000000001;//!< Точність, з якою проводяться обчислення
 		Vector2d x0;
-		x0 << 1.0, 5.0; //!< Початкове наближення
+		x0 << 5.0, 2.0; //!< Початкове наближення
 		wcout << L"| Точність обчислення:  " << setw(10) << eps << "                                                                |" << endl;
 		stringstream ss;
 		ss << x0.format(CleanFmt);
